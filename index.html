@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jadzia's World</title>
+	<link href="styles.css" rel="stylesheet"
+	type="text/css"/>
+</head>
+<body>
+	<h1>Jadzia & Her Home</h1><br>
+	<img src="images/jadziaportrait.png">
+	<p>Born on the outskirts of the Andromeda Galaxy, on a planet with two suns,<br> lives a person named Jadzia. She is tall, curious, her hair and skin are normally shades of purple and blue. <br>However, because the people of the planet change colors based on their moods, when Jadzia is angry, she turns red, when she is overjoyed she turns yellow.</br>Jadzia spends her time exploring space and traveling to other plants, but always returns home.</br> </p>
+	
+
+	<iframe width="560" height="500" src="https://www.youtube.com/embed/cKswa_O7NyY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			<li><a href="habitat.html">Habitat</a></li>
+			<li><a href="Unusual.html">Unusual</a></li>
+			<li><a href="Traits.html">Traits</a></li>
+			<li><a href="sounds.html">Sound</li>
+			<li><a href="projectstatement.html">Project Statement</a></li>
+
+
+		<script type="text/javascript">
+
+	
+
+
+var nav = 1;
+
+
+
+//The setup function only happens once
+function setup() {
+	createCanvas(500, 500); //create a 500px X 500px canvas
+}
+
+//The draw function happens over and over again
+function draw() {
+  background(0,0,0); //black background
+  let x = mouseX;
+  let y = mouseY;
+  let ix = width - mouseX;
+  let iy = height - mouseY;
+  stroke(76,0,153) // an RGB color for the circle's border
+  fill(mouseY,ix,nav); // an RGB color for the inside of the circle (the last number refers to transparency (min. 0, max. 255))
+  stroke(mouseY);
+  strokeWeight(0)
+  ellipse(iy,mouseX,nav,nav);
+  strokeWeight(0);
+  ellipse(250,nav,nav,nav);
+
+  
+nav = nav + 1;
+
+}
+
+
+</script>
+
+
+
+
+	</body>
+
+</html>
